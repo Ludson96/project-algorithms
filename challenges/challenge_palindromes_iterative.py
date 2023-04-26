@@ -1,4 +1,4 @@
-def is_palindrome_iterative(word):
+def is_palindrome_iterative(word: str) -> bool:
     if not word:
         return False
     for i in range(len(word) // 2):

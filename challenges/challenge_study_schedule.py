@@ -1,5 +1,5 @@
 def study_schedule(
-    permanence_period: tuple[int, int], target_time: int
+    permanence_period: list[tuple[int, int]], target_time: int
 ) -> None | int:
     result = 0
 

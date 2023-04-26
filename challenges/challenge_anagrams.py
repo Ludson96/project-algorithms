@@ -1,4 +1,4 @@
-def quicksort(palavra):
+def quicksort(palavra: str) -> str:
     if len(palavra) <= 1:
         return palavra
     else:
@@ -20,7 +20,7 @@ def quicksort(palavra):
         )
 
 
-def is_anagram(first_string, second_string):
+def is_anagram(first_string: str, second_string: str) -> tuple[str, str, bool]:
     if not first_string and not second_string:
         return (first_string, second_string, False)
     primeira, segunda = quicksort(first_string.lower()), quicksort(

@@ -59,23 +59,107 @@ Neste projeto, resolvi problemas e otimizei algoritmos desenvolvendo a minha cap
 
 </details>
 
-<!-- ## Detalhamento das funções
+## Detalhamento das funções
 
 Abaixo está uma lista das funções disponíveis.
 
-<!-- <details> -->
+<details>
 
-<!-- ### `study_schedule(permanence_period, target_time)`
+### `study_schedule(permanence_period, target_time)`
 
-Essa função recebe uma tupla de dois números inteiros (`permanence_period`) sendo o primeiro dia de entrada e o segundo dia de saída e um numero inteiro sendo o como parâmetro, realiza uma solicitação GET na URL e retorna o conteúdo HTML da página.
+- localizado em `challenges/challenge_study_schedule.py`
+
+Essa função recebe uma lista de tuplas (`permanence_period`) em que cada tupla representa o período de permanência de uma pessoa estudante no sistema com seu horário de entrada e de saída e um numero inteiro (`target_time`) que será o objetivo  de tempo a ser analisado como parâmetro, retorna a quantidade de pessoas estudantes estavam no sistema neste horário.
 
 Exemplo de uso:
 
 ```python
-html_content = fetch("https://www.example.com")
+permanence_period = [(2, 2), (1, 2), (2, 3), (1, 5), (4, 5), (4, 5)]
+students_quantity = study_schedule(permanence_period, 5)
 ```
 
-</details> -->
+Exemplo de retorno:
+
+```md
+# Nos arrays temos 6 estudantes
+
+# estudante             1       2       3       4       5       6
+permanence_period = [(2, 2), (1, 2), (2, 3), (1, 5), (4, 5), (4, 5)]
+
+target_time = 5  # saída: 3, pois a quarta, a quinta e a sexta pessoa estudante ainda estavam estudando nesse horário.
+target_time = 4  # saída: 3, pois a quinta e a sexta pessoa estudante começaram a estudar nesse horário e a quarta ainda estava estudando.
+target_time = 3  # saída: 2, pois a terceira e a quarta pessoa estudante ainda estavam estudando nesse horário.
+target_time = 2  # saída: 4, pois a primeira, a segunda, a terceira e a quarta pessoa estudante estavam estudando nesse horário.
+target_time = 1  # saída: 2, pois a segunda e a quarta pessoa estudante estavam estudando nesse horário.
+
+Para esse exemplo, depois de rodar a função para todos esses `target_times`, julgamos que o melhor horário é o `2`, pois esse retornou `4`, já que 4 estudantes estavam presentes nesse horário!
+```
+
+### `is_palindrome_recursive(word, low_index, high_index)`
+
+- localizado em `challenges/challenge_palindromes_recursive.py`
+
+Essa função recebe uma palavra (`word`), o menor index (`low_index`) e o maior index (`high_index`) como parametro. Verifica de forma recursiva se a palavra informada é um palíndromo e retorna um valor boolean (`True ou False`)
+
+Exemplo de uso:
+
+```python
+word = "ANA"
+is_palindrome_recursive(word, 0, 2)
+# saída: True
+word = "AGUA"
+is_palindrome_recursive(word, 0, 3)
+# saída: False
+```
+
+### `is_palindrome_iterative(word)`
+
+- localizado em `challenges/challenge_palindromes_iterative.py`
+
+Essa função recebe uma palavra (`word`). Verifica de forma iterativa se a palavra informada é um palíndromo e retorna um valor boolean (`True ou False`)
+
+Exemplo de uso:
+
+```python
+word = "ANA"
+is_palindrome_iterative(word)
+# saída: True
+word = "AGUA"
+is_palindrome_iterative(word)
+# saída: False
+```
+
+### `is_anagram(first_string, second_string)`
+
+- localizado em `challenges/challenge_anagrams.py`
+
+Essa função recebe duas palavra (`first_string` e `second_string`). Utiliza o algoritmo de ordenação `QuickSort` e compara as duas palavras, ordena e identifica se uma é um anagrama da outras. Retorna uma tupla com a primeira palavra, segunda palavra e um valor boolean (`True ou False`)
+
+Exemplo de uso:
+
+```python
+first_string = "amor"
+second_string = "roma"
+is_anagram(first_string, second_string)
+# saída: ('amor', 'amor', True)
+# Explicação: Nesse caso a palavra 'amor' ordenada continua 'amor' e 'roma' ordenado vira 'amor, além disso a função é True, pois a palavra "roma" é um anagrama de "amor".
+```
+
+### `find_duplicate(nums)`
+
+- localizado em `challenges/challenge_find_the_duplicate.py`
+
+Essa função recebe uma lista de números inteiros no intervalo de [1, n] (`nums`). Utiliza o algoritmo de busca `Binário` e retorna apenas um número duplicado em nums.
+
+Exemplo de uso:
+
+```python
+nums = [3, 1, 2, 4, 6, 5, 7, 7, 7, 8]
+find_duplicate(nums)
+# saída: 7
+```
+
+</details>
 
 [Git-logo]: https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white
 [Git-url]: https://git-scm.com

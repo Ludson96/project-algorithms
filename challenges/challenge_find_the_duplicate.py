@@ -1,4 +1,4 @@
-def binary_search(numbers, target):
+def binary_search(numbers: int, target: int) -> int | bool:
     start = 0
     end = len(numbers) - 1
 
@@ -16,7 +16,7 @@ def binary_search(numbers, target):
     return False
 
 
-def find_duplicate(nums):
+def find_duplicate(nums: list[int]) -> int | bool:
     nums.sort()
     if len(nums) < 2 or not nums:
         return False
