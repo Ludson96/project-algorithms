@@ -59,15 +59,15 @@ Neste projeto, resolvi problemas e otimizei algoritmos desenvolvendo a minha cap
 
 </details>
 
-## Raspagem
+<!-- ## Detalhamento das funções
 
-Abaixo está uma lista das funções de raspagem disponíveis no arquivo `scraper.py`.
+Abaixo está uma lista das funções disponíveis.
 
-<details>
+<!-- <details> -->
 
-### `fetch(url)`
+<!-- ### `study_schedule(permanence_period, target_time)`
 
-Essa função recebe uma URL como parâmetro, realiza uma solicitação GET na URL e retorna o conteúdo HTML da página.
+Essa função recebe uma tupla de dois números inteiros (`permanence_period`) sendo o primeiro dia de entrada e o segundo dia de saída e um numero inteiro sendo o como parâmetro, realiza uma solicitação GET na URL e retorna o conteúdo HTML da página.
 
 Exemplo de uso:
 
@@ -75,47 +75,7 @@ Exemplo de uso:
 html_content = fetch("https://www.example.com")
 ```
 
-### `scrape_updates(html_content)`
-
-Essa função recebe o conteúdo HTML da página como parâmetro e retorna uma lista de links para as atualizações de notícias no site.
-
-Exemplo de uso:
-
-```python
-news_links = scrape_updates(html_content)
-```
-
-### `scrape_next_page_link(html_content)`
-
-Essa função recebe o conteúdo HTML da página como parâmetro e retorna o link para a próxima página de atualizações.
-
-Exemplo de uso:
-
-```python
-next_page_link = scrape_next_page_link(html_content)
-```
-
-### `scrape_news(html_content)`
-
-Essa função recebe o conteúdo HTML da página como parâmetro e retorna um dicionário com informações sobre uma notícia específica.
-
-Exemplo de uso:
-
-```python
-news_info = scrape_news(html_content)
-```
-
-### `get_tech_news(n)`
-
-Essa função recebe um número inteiro n como parâmetro e retorna uma lista com as últimas n notícias do site.
-
-Exemplo de uso:
-
-```python
-latest_news = get_tech_news(10)
-```
-
-</details>
+</details> -->
 
 [Git-logo]: https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white
 [Git-url]: https://git-scm.com
